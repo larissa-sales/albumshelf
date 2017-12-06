@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ep3</title>
+    <title>AlbumShelf</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,10 +10,13 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-dark">
-    <font color="white">AlbumShelf</font>
-    <%= link_to 'New Album', new_album_path, class: "btn btn-info"%>
+    <nav class="navbar navbar-light" style="background-color: #3d6f94;">
+      <font color="white">AlbumShelf</font>
+      <%= link_to 'My Albums', albums_path, class: "btn btn-light"%>
+      <%= link_to 'My Books', new_album_path, class: "btn btn-light"%>
+      <%= link_to 'New Album', new_album_path, class: "btn btn-light"%>
     </nav>
+
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
