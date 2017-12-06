@@ -14,7 +14,7 @@ class AlbumsController < ApplicationController
 
   # GET /albums/new
   def new
-    @album = Album.new
+    @album = current_user.albums.build
   end
 
   # GET /albums/1/edit
@@ -24,7 +24,7 @@ class AlbumsController < ApplicationController
   # POST /albums
   # POST /albums.json
   def create
-    @album = Album.new(album_params)
+    @album = current_user.albums.build(album_params)
 
     respond_to do |format|
       if @album.save

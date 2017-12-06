@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206133449) do
+ActiveRecord::Schema.define(version: 20171206160021) do
 
   create_table "albums", force: :cascade do |t|
     t.string "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20171206133449) do
     t.string "cover_content_type"
     t.integer "cover_file_size"
     t.datetime "cover_updated_at"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
