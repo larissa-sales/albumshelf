@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-dark bg-dark">
+    <font color="white">AlbumShelf</font>
+    <%= link_to 'New Album', new_album_path, class: "btn btn-info"%>
+    </nav>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
