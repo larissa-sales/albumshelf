@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :albums
   has_many :books
+  validates_uniqueness_of :user_name
 end
