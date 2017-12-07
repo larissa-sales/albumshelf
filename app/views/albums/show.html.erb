@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class = "form">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @album.title %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @album.title %>
+  </p>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @album.artist %>
-</p>
+  <p>
+    <strong>Artist:</strong>
+    <%= @album.artist %>
+  </p>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @album.genre %>
-</p>
+  <p>
+    <strong>Genre:</strong>
+    <%= @album.genre %>
+  </p>
 
-<p>
-  <strong>Year:</strong>
-  <%= @album.year %>
-</p>
+  <p>
+    <strong>Year:</strong>
+    <%= @album.year %>
+  </p>
 
-<p>
-  <strong>Cover:</strong>
-  <%= image_tag @album.cover.url(:medium) %>
-</p>
+  <p>
+    <strong>Cover:</strong>
+    <%= image_tag @album.cover.url(:medium) %>
+  </p>
 
-<%= link_to 'Edit', edit_album_path(@album), class: "btn btn-info" %>
-<%= link_to 'Back', albums_path, class: "btn btn-info" %>
+  <%= link_to 'Edit', edit_album_path(@album), class: "btn btn-info" %>
+  <%= link_to 'Back', albums_path, class: "btn btn-info" %>
+</div>

@@ -1,37 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class = "form">
+  <p id="notice"><%= notice %></p>
 
-<h1>Albums</h1>
+  <h1>Albums</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Cover</th>
-      <th>Title</th>
-      <th>Artist</th>
-      <th>Genre</th>
-      <th>Year</th>
-      <th>User<th/>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @albums.each do |album| %>
+  <table>
+    <thead>
       <tr>
-                <td><%= image_tag album.cover.url(:thumb) %></td>
-        <td><%= album.title %></td>
-        <td><%= album.artist %></td>
-        <td><%= album.genre %></td>
-        <td><%= album.year %></td>
-        <td><%= album.user.email %></td>
-        <td><%= link_to 'Show', album, class: "btn btn-info" %></td>
-        <td><%= link_to 'Edit', edit_album_path(album), class: "btn btn-info" %></td>
-        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %></td>
+        <th>Cover</th>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>User<th/>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @albums.each do |album| %>
+        <tr>
+          <td><%= image_tag album.cover.url(:thumb) %></td>
+          <td><%= album.title %></td>
+          <td><%= album.artist %></td>
+          <td><%= album.genre %></td>
+          <td><%= album.year %></td>
+          <td><%= album.user.email %></td>
+          <td><%= link_to 'Show', album, class: "btn btn-info" %></td>
+          <td><%= link_to 'Edit', edit_album_path(album), class: "btn btn-info" %></td>
+          <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Album', new_album_path, class: "btn btn-info" %>
+  <br>
+
+  <%= link_to 'New Album', new_album_path, class: "btn btn-info" %>
+</div>
