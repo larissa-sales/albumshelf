@@ -19,7 +19,7 @@
 
     <tbody>
       <% @books.each do |book| %>
-        <% if current_user == books.user%>
+        <% if current_user == book.user%>
           <tr>
             <td><%= image_tag book.cover.url(:thumb) %></td>
             <td><%= book.title %></td>

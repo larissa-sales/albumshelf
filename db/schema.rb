@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171207120618) do
+ActiveRecord::Schema.define(version: 20171207165950) do
 
   create_table "albums", force: :cascade do |t|
     t.string "title"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 20171207120618) do
     t.integer "cover_file_size"
     t.datetime "cover_updated_at"
     t.integer "user_id"
+  end
+
+  create_table "albums_books", id: false, force: :cascade do |t|
+    t.integer "album_id", null: false
+    t.integer "book_id", null: false
+    t.index ["album_id"], name: "index_albums_books_on_album_id"
+    t.index ["book_id"], name: "index_albums_books_on_Book_id"
   end
 
   create_table "books", force: :cascade do |t|
