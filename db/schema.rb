@@ -10,11 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171207100812) do
+ActiveRecord::Schema.define(version: 20171207120618) do
 
   create_table "albums", force: :cascade do |t|
     t.string "title"
     t.string "artist"
+    t.string "genre"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "cover_file_name"
+    t.string "cover_content_type"
+    t.integer "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.integer "user_id"
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.string "author"
     t.string "genre"
     t.integer "year"
     t.datetime "created_at", null: false

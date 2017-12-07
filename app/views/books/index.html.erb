@@ -1,0 +1,38 @@
+<div class = "form">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Books</h1>
+
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th>Cover</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>User</th>
+        <th>Options<th/>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @books.each do |book| %>
+        <tr>
+          <td><%= image_tag book.cover.url(:thumb) %></td>
+          <td><%= book.title %></td>
+          <td><%= book.author %></td>
+          <td><%= book.genre %></td>
+          <td><%= book.year %></td>
+          <td><%= book.user.email%></td>
+          <td><%= link_to 'Details', book, class: "btn btn-info", style: "color: white" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Book', new_book_path, class: "btn btn-info", style: "color: white" %>
+</div>
