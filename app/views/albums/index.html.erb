@@ -25,9 +25,9 @@
           <td><%= album.genre %></td>
           <td><%= album.year %></td>
           <td><%= album.user.email %></td>
-          <td><%= link_to 'Show', album, class: "btn btn-info" %></td>
-          <td><%= link_to 'Edit', edit_album_path(album), class: "btn btn-info" %></td>
-          <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %></td>
+          <td><%= link_to 'Show', album, class: "btn btn-info", style: "color: white" %></td>
+          <td><%= link_to 'Edit', edit_album_path(album), class: "btn btn-info", style: "color: white" %></td>
+          <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %></td>
         </tr>
       <% end %>
     </tbody>
@@ -35,5 +35,5 @@
 
   <br>
 
-  <%= link_to 'New Album', new_album_path, class: "btn btn-info" %>
+  <%= link_to 'New Album', new_album_path, class: "btn btn-info", style: "color: white" %>
 </div>
