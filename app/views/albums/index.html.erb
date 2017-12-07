@@ -3,15 +3,16 @@
 
   <h1>Albums</h1>
 
-  <table>
-    <thead>
+  <table class="table">
+    <thead class="thead-light">
       <tr>
         <th>Cover</th>
         <th>Title</th>
         <th>Artist</th>
         <th>Genre</th>
         <th>Year</th>
-        <th>User<th/>
+        <th>User</th>
+        <th>Options<th/>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -26,8 +27,6 @@
           <td><%= album.year %></td>
           <td><%= album.user.email %></td>
           <td><%= link_to 'Show', album, class: "btn btn-info", style: "color: white" %></td>
-          <td><%= link_to 'Edit', edit_album_path(album), class: "btn btn-info", style: "color: white" %></td>
-          <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %></td>
         </tr>
       <% end %>
     </tbody>
