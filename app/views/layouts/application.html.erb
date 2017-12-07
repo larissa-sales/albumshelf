@@ -13,10 +13,10 @@
     <nav class="navbar navbar-light" style="background-color: #3d6f94;">
       <font color="white"><%= link_to 'AlbumShelf', albums_path, style: "text-decoration: none; color: white; font-size: 25px" %></font>
       <% if user_signed_in? %>
-        <%= link_to 'My Albums', albums_path, style: "text-decoration: none; color: white"%>
-        <%= link_to 'My Books', books_path, style: "text-decoration: none; color: white"%>
-        <%= link_to 'New Album', new_album_path, style: "text-decoration: none; color: white"%>
-        <%= link_to 'New Book', new_book_path, style: "text-decoration: none; color: white"%>
+        <%= link_to 'Albums', albums_path, style: "text-decoration: none; color: white"%>
+        <%= link_to 'Books', books_path, style: "text-decoration: none; color: white"%>
+        <%= link_to 'My Albums', albums_myalbums_path, style: "text-decoration: none; color: white"%>
+        <%= link_to 'My Books', books_mybooks_path, style: "text-decoration: none; color: white"%>
       <% end %>
       <% if user_signed_in? == false %>
         <%= link_to 'Log In', new_user_session_path, style: "text-decoration: none; color: white"%>

@@ -1,7 +1,7 @@
 <div class = "form">
   <p id="notice"><%= notice %></p>
 
-  <h1>Albums</h1>
+  <h1>My Albums</h1>
 
   <table class="table">
     <thead class="thead-light">
@@ -19,15 +19,17 @@
 
     <tbody>
       <% @albums.each do |album| %>
-        <tr>
-          <td><%= image_tag album.cover.url(:thumb) %></td>
-          <td><%= album.title %></td>
-          <td><%= album.artist %></td>
-          <td><%= album.genre %></td>
-          <td><%= album.year %></td>
-          <td><%= album.user.user_name %></td>
-          <td><%= link_to 'Details', album, class: "btn btn-info", style: "color: white" %></td>
-        </tr>
+        <%if current_user == album.user%>
+          <tr>
+            <td><%= image_tag album.cover.url(:thumb) %></td>
+            <td><%= album.title %></td>
+            <td><%= album.artist %></td>
+            <td><%= album.genre %></td>
+            <td><%= album.year %></td>
+            <td><%= album.user.user_name %></td>
+            <td><%= link_to 'Details', album, class: "btn btn-info", style: "color: white" %></td>
+          </tr>
+        <% end %>
       <% end %>
     </tbody>
   </table>

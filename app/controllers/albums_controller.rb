@@ -11,6 +11,10 @@ class AlbumsController < ApplicationController
   def show
   end
 
+  def myalbums
+    @albums = current_user.albums
+  end
+
   # GET /albums/new
   def new
     @album = current_user.albums.build

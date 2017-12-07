@@ -1,7 +1,7 @@
 <div class = "form">
   <p id="notice"><%= notice %></p>
 
-  <h1>Books</h1>
+  <h1>My Books</h1>
 
   <table class="table">
     <thead class="thead-light">
@@ -19,15 +19,17 @@
 
     <tbody>
       <% @books.each do |book| %>
-        <tr>
-          <td><%= image_tag book.cover.url(:thumb) %></td>
-          <td><%= book.title %></td>
-          <td><%= book.author %></td>
-          <td><%= book.genre %></td>
-          <td><%= book.year %></td>
-          <td><%= book.user.user_name%></td>
-          <td><%= link_to 'Details', book, class: "btn btn-info", style: "color: white" %></td>
-        </tr>
+        <% if current_user == books.user%>
+          <tr>
+            <td><%= image_tag book.cover.url(:thumb) %></td>
+            <td><%= book.title %></td>
+            <td><%= book.author %></td>
+            <td><%= book.genre %></td>
+            <td><%= book.year %></td>
+            <td><%= book.user.user_name%></td>
+            <td><%= link_to 'Details', book, class: "btn btn-info", style: "color: white" %></td>
+          </tr>
+          <% end %>
       <% end %>
     </tbody>
   </table>
