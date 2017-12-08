@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20171207165950) do
     t.integer "album_id", null: false
     t.integer "book_id", null: false
     t.index ["album_id"], name: "index_albums_books_on_album_id"
-    t.index ["book_id"], name: "index_albums_books_on_Book_id"
+    t.index ["book_id"], name: "index_albums_books_on_book_id"
   end
 
   create_table "books", force: :cascade do |t|

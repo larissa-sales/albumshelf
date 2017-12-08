@@ -9,9 +9,9 @@
 
   </head>
 
-  <body>
-    <nav class="navbar navbar-light" style="background-color: #1d5a67;">
-      <font color="white"><%= link_to 'AlbumShelf', welcome_index_path, style: "text-decoration: none; color: white; font-size: 25px" %></font>
+  <body style="background-color: #e0f2f1">
+    <nav class="navbar" style="background-color: #1d5a67;">
+      <font href="#"><%= link_to 'AlbumShelf', welcome_index_path, style: "text-decoration: none; color: white; font-size: 25px" %></font>
       <% if user_signed_in? %>
         <%= link_to 'Albums', albums_path, style: "text-decoration: none; color: white"%>
         <%= link_to 'Books', books_path, style: "text-decoration: none; color: white"%>
@@ -25,7 +25,6 @@
       <% if user_signed_in? %>
         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, style: "text-decoration: none; color: white"%>
       <% end %>
-
     </nav>
 
     <%= yield %>
