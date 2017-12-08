@@ -9,7 +9,7 @@
 
   </head>
 
-  <body style="background-color: #e0f2f1">
+  <body class="<%= @home? 'imgBg' : 'colorBg' %>">
     <nav class="navbar" style="background-color: #1d5a67;">
       <font href="#"><%= link_to 'AlbumShelf', welcome_index_path, style: "text-decoration: none; color: white; font-size: 25px" %></font>
       <% if user_signed_in? %>

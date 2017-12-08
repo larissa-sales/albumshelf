@@ -15,3 +15,12 @@
  */
 
 @import "bootstrap";
+
+.colorBg{
+  background-color: #e0f2f1;
+}
+
+.imgBg{
+  background-image: image-url("background.jpg");
+  background-size: cover;
+}
