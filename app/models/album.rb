@@ -3,4 +3,5 @@ class Album < ApplicationRecord
   validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
   belongs_to :user
   has_and_belongs_to_many :books
+  validates :title, :artist, presence: true, allow_blank: false
 end
