@@ -20,6 +20,8 @@
 /node_modules
 /yarn-error.log
 
+/public/system/books/
+
 .byebug_history
 
 /public/system/albums/
