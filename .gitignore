@@ -20,7 +20,7 @@
 /node_modules
 /yarn-error.log
 
-/public/system/books/
+/public/system/
 
 .byebug_history
 

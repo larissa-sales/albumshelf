@@ -13,6 +13,7 @@
     <nav class="navbar" style="background-color: #1d5a67;">
       <font href="#"><%= link_to 'AlbumShelf', welcome_index_path, style: "text-decoration: none; color: white; font-size: 25px; font-family: Ubuntu" %></font>
       <% if user_signed_in? %>
+        <div class="round_image"><%= image_tag(current_user.avatar.url(:thumb)) %></div>
         <%= link_to 'Albums', albums_path, style: "text-decoration: none; color: white"%>
         <%= link_to 'Books', books_path, style: "text-decoration: none; color: white"%>
         <%= link_to 'My Albums', albums_myalbums_path, style: "text-decoration: none; color: white"%>
@@ -24,7 +25,6 @@
       <% end %>
       <% if user_signed_in? %>
         <%= link_to 'Profile', show_user_index_path, style: "text-decoration: none; color: white"%>
-        <%= link_to 'Edit', edit_user_registration_path, style: "text-decoration: none; color: white"%>
         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, style: "text-decoration: none; color: white"%>
       <% end %>
     </nav>
