@@ -14,6 +14,10 @@ class AlbumsController < ApplicationController
   def booksrelated
   end
 
+  def addbooktoalbum
+    @album.books << @book
+  end
+
   def addbooks
   end
 
