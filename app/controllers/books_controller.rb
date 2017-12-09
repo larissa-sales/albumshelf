@@ -11,6 +11,8 @@ class BooksController < ApplicationController
     @books = current_user.books
   end
 
+  def sharingbooks
+  end
 
   # GET /books/1
   # GET /books/1.json

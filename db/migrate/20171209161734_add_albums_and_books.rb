@@ -1,4 +1,4 @@
-class AlbumsAndBooksTable < ActiveRecord::Migration[5.1]
+class AddAlbumsAndBooks < ActiveRecord::Migration[5.1]
   def change
     create_join_table :albums, :books do |t|
       t.index :album_id

@@ -29,4 +29,6 @@
   <%= link_to 'Edit', edit_album_path(@album), class: "btn btn-info", style: "color: white" %>
   <%= link_to 'Delete', @album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %>
   <%= link_to 'Back', albums_path, class: "btn btn-info", style: "color: white" %>
+  <%= link_to 'Related Books', albums_booksrelated_path , class: "btn btn-info", style: "color: white" %>
+
 </div>

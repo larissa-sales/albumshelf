@@ -1,18 +1,25 @@
 class AlbumsController < ApplicationController
-  before_action :set_album, only: [:show, :edit, :update, :destroy]
+  before_action :set_album, only: [:show, :edit, :update, :destroy, :booksrelated, :addbooks]
+
   # GET /albums
   # GET /albums.json
   def index
     @albums = Album.all
   end
 
+  def myalbums
+    @albums = current_user.albums
+  end
+
+  def booksrelated
+  end
+
+  def addbooks
+  end
+
   # GET /albums/1
   # GET /albums/1.json
   def show
-  end
-
-  def myalbums
-    @albums = current_user.albums
   end
 
   # GET /albums/new
