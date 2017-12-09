@@ -3,7 +3,7 @@
 
   <p>
     <strong>Avatar:</strong>
-    <%= image_tag @user.avatar.url(:medium) %>
+    <%= image_tag @user.avatar.url(:thumb) %>
   </p>
 
   <p>
@@ -27,5 +27,4 @@
   </p>
 
   <%= link_to 'Edit', edit_user_registration_path(@user), class: "btn btn-info", style: "color: white" %>
-  <%= link_to 'Back', albums_path, class: "btn btn-info", style: "color: white" %>
 </div>

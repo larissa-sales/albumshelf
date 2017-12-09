@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'albums/myalbums'
   get 'albums/:id/booksrelated' => 'albums#booksrelated', as: 'albums_booksrelated'
   get 'albums/:id/addbooks' => 'albums#addbooks', as: 'albums_addbooks'
-
+  resources :show_user
   resources :albums
   resources :books
   devise_for :users, :controllers => { registrations: 'registrations' }
