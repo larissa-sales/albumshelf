@@ -28,6 +28,7 @@
           <td><%= book.title %></td>
           <td><%= book.genre %></td>
           <td><%= link_to 'Details', book, class: "btn btn-info", style: "color: white" %></td>
+          <td><%= link_to 'Delete', albums_deletebook_path(bookid: book.id) , data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %></td>
         </tr>
       <% end %>
     </tbody>

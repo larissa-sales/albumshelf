@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_action :set_album, only: [:show, :edit, :update, :destroy, :booksrelated, :addbooks]
+  before_action :set_album, only: [:show, :edit, :update, :destroy, :booksrelated, :addbooks, :addbooktoalbum, :deletebook]
 
   # GET /albums
   # GET /albums.json
@@ -12,6 +12,16 @@ class AlbumsController < ApplicationController
   end
 
   def booksrelated
+  end
+
+  def addbooktoalbum
+    @album.books << Book.find(params[:bookid])
+    redirect_to albums_addbooks_path(@album)
+  end
+
+  def deletebook
+     @album.books.delete(Book.find(params[:bookid]))
+     redirect_to albums_booksrelated_path(@album)
   end
 
   def addbooks
