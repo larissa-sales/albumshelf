@@ -1,0 +1,30 @@
+<div class = "form">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Avatar:</strong>
+    <%= image_tag @user.avatar.url(:thumb) %>
+  </p>
+
+  <p>
+    <strong>First Name:</strong>
+    <%= @user.first_name %>
+  </p>
+
+  <p>
+    <strong>Last Name:</strong>
+    <%= @user.last_name %>
+  </p>
+
+  <p>
+    <strong>User Name:</strong>
+    <%= @user.user_name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+
+  <%= link_to 'Edit', edit_user_registration_path(@user), class: "btn btn-info", style: "color: white" %>
+</div>
