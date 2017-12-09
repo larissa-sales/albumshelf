@@ -5,6 +5,11 @@
     <%= devise_error_messages! %>
 
     <div class="field">
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar %>
+    </div>
+
+    <div class="field">
       <%= f.label :first_name %><br />
       <%= f.text_field :first_name, autofocus: true, class: "form-control", id:"exampleInputEmail1" %>
     </div>
