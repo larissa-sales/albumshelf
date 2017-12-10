@@ -14,7 +14,7 @@
       <font href="#"><%= link_to 'AlbumShelf', welcome_index_path, style: "text-decoration: none; color: white; font-size: 25px; font-family: Ubuntu" %></font>
       <% if user_signed_in? %>
         <div class="round_image"><%= image_tag(current_user.avatar.url(:thumb)) %></div>
-        <strong style="color:#B0E0E6"><%= current_user.user_name %> </strong>
+        <strong style="color:#B0E0E6"> Hello, <%= current_user.user_name %> </strong>
         <%= link_to 'Albums', albums_path, style: "text-decoration: none; color: white"%>
         <%= link_to 'Books', books_path, style: "text-decoration: none; color: white"%>
         <%= link_to 'My Albums', albums_myalbums_path, style: "text-decoration: none; color: white"%>
