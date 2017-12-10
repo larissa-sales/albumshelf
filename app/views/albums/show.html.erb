@@ -25,9 +25,10 @@
     <strong>Cover:</strong>
     <%= image_tag @album.cover.url(:medium) %>
   </p>
-
-  <%= link_to 'Edit', edit_album_path(@album), class: "btn btn-info", style: "color: white" %>
-  <%= link_to 'Delete', @album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %>
+  <%if current_user == @album.user%>
+    <%= link_to 'Edit', edit_album_path(@album), class: "btn btn-info", style: "color: white" %>
+    <%= link_to 'Delete', @album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %>
+  <% end %>
   <%= link_to 'Back', albums_path, class: "btn btn-info", style: "color: white" %>
   <%= link_to 'Related Books', albums_booksrelated_path , class: "btn btn-info", style: "color: white" %>
 
