@@ -1,32 +1,31 @@
 <div class = "form">
   <p id="notice"><%= notice %></p>
 
-  <p style="color:Black; font-size: 16px;">
-    <strong style="color:#1d5a67">Title:</strong>
+  <p style="color:Black; font-size: 16px;" >
+    <strong style="color:#1d5a67" >Title:</strong>
     <%= @album.title %>
   </p>
 
-  <p style="color:Black; font-size: 16px;">
-    <strong style="color:#1d5a67">Artist:</strong>
+  <p style="color:Black; font-size: 16px;" >
+    <strong style="color:#1d5a67" >Artist:</strong>
     <%= @album.artist %>
   </p>
 
-  <p style="color:Black; font-size: 16px;">
-    <strong style="color:#1d5a67">Genre:</strong>
+  <p style="color:Black; font-size: 16px;" >
+    <strong style="color:#1d5a67" >Genre:</strong>
     <%= @album.genre %>
   </p>
 
-  <p style="color:Black; font-size: 16px;">
-    <strong style="color:#1d5a67">Year:</strong>
+  <p style="color:Black; font-size: 16px;" >
+    <strong style="color:#1d5a67" >Year:</strong>
     <%= @album.year %>
   </p>
 
   <p style="color:Black; font-size: 16px;">
     <strong style="color:#1d5a67">Cover:</strong>
-
   </p>
 
-  <p   style="text-align:center;">
+  <p style="text-align:center;" >
     <%= image_tag @album.cover.url(:medium) %>
   </p>
 
