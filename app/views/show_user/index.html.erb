@@ -2,12 +2,12 @@
   <p id="notice"><%= notice %></p>
 
     <%if current_user.admin?%>
-        <strong>Admin User</strong>
+        <strong style="color:#1d5a67; font-size: 35px" >Admin User</strong>
     <%end%>
 
   <p>
 
-    <%= image_tag (current_user.avatar.url(:thumb)) %>
+    <%= image_tag (current_user.avatar.url(:medium)) %>
   </p>
 
   <p style="color:Black; font-size: 16px;" >
