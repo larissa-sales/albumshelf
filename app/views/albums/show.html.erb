@@ -1,30 +1,35 @@
 <div class = "form">
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Title:</strong>
+  <p style="color:Black; font-size: 16px;">
+    <strong style="color:#1d5a67">Title:</strong>
     <%= @album.title %>
   </p>
 
-  <p>
-    <strong>Artist:</strong>
+  <p style="color:Black; font-size: 16px;">
+    <strong style="color:#1d5a67">Artist:</strong>
     <%= @album.artist %>
   </p>
 
-  <p>
-    <strong>Genre:</strong>
+  <p style="color:Black; font-size: 16px;">
+    <strong style="color:#1d5a67">Genre:</strong>
     <%= @album.genre %>
   </p>
 
-  <p>
-    <strong>Year:</strong>
+  <p style="color:Black; font-size: 16px;">
+    <strong style="color:#1d5a67">Year:</strong>
     <%= @album.year %>
   </p>
 
-  <p>
-    <strong>Cover:</strong>
+  <p style="color:Black; font-size: 16px;">
+    <strong style="color:#1d5a67">Cover:</strong>
+
+  </p>
+
+  <p   style="text-align:center;">
     <%= image_tag @album.cover.url(:medium) %>
   </p>
+
   <%if current_user == @album.user%>
     <%= link_to 'Edit', edit_album_path(@album), class: "btn btn-info", style: "color: white" %>
     <%= link_to 'Delete', @album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %>

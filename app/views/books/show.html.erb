@@ -1,28 +1,32 @@
 <div class = "form">
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Title:</strong>
+  <p style="color:Black; font-size: 16px;">
+    <strong style="color:#1d5a67">Title:</strong>
     <%= @book.title %>
   </p>
 
-  <p>
-    <strong>Author:</strong>
+
+  <p style="color:Black; font-size: 16px;">
+    <strong style="color:#1d5a67">Author:</strong>
     <%= @book.author %>
   </p>
 
-  <p>
-    <strong>Genre:</strong>
+  <p style="color:Black; font-size: 16px;">
+    <strong style="color:#1d5a67">Genre:</strong>
     <%= @book.genre %>
   </p>
 
-  <p>
-    <strong>Year:</strong>
+  <p style="color:Black; font-size: 16px;">
+    <strong style="color:#1d5a67">Year:</strong>
     <%= @book.year %>
   </p>
 
-  <p>
-    <strong>Cover:</strong>
+  <p style="color:Black; font-size: 16px;">
+    <strong style="color:#1d5a67">Cover:</strong>
+  </p>
+
+  <p   style="text-align:center;">
     <%= image_tag @book.cover.url(:medium) %>
   </p>
 
