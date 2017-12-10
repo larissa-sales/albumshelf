@@ -24,7 +24,11 @@
           <td><%= book.author %></td>
           <td><%= book.genre %></td>
           <td><%= book.year %></td>
-          <td><%= book.user.user_name%></td>
+          <% if book.user.nil?%>
+            <td>  </td>
+          <% else %>
+            <td><%= book.user.user_name%></td>
+          <% end %>
           <td><%= link_to 'Details', book, class: "btn btn-info", style: "color: white" %></td>
         </tr>
       <% end %>

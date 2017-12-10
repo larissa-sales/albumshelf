@@ -28,7 +28,7 @@
           <td><%= album.title %></td>
           <td><%= album.artist %></td>
           <td><%= link_to 'Details', album, class: "btn btn-info", style: "color: white" %></td>
-          <td><%= link_to 'Add', books_addalbums_tobook_path(albumid: album.id), data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %></td>
+          <td><%= link_to 'Add', books_addalbums_tobook_path(albumid: album.id), data: { confirm: 'Do You Confirm This Adding?' }, class: "btn btn-info", style: "color: white" %></td>
         </tr>
       <% end %>
     </tbody>

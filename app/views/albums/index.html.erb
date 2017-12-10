@@ -24,7 +24,11 @@
           <td><%= album.artist %></td>
           <td><%= album.genre %></td>
           <td><%= album.year %></td>
-          <td><%= album.user.user_name %></td>
+          <% if album.user.nil?%>
+            <td>  </td>
+          <% else %>
+            <td><%= album.user.user_name%></td>
+          <% end %>
           <td><%= link_to 'Details', album, class: "btn btn-info", style: "color: white" %></td>
         </tr>
       <% end %>
