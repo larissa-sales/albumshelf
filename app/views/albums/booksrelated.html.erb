@@ -3,12 +3,12 @@
 
   <h1>Books related to</h1>
 
-  <p>
+  <p style="font-family:monospace; color:Black; font-size: 35px;">
     <%= @album.title %>
   </p>
 
-  <p>
-    <%= image_tag @album.cover.url(:thumb) %>
+  <p style="text-align:center;">
+    <%= image_tag @album.cover.url(:medium) %>
   </p>
 
   <table class="table table-hover">

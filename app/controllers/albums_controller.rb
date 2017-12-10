@@ -15,8 +15,9 @@ class AlbumsController < ApplicationController
   end
 
   def addbooktoalbum
-    @album.books << Book.find(params[:bookid])
-    redirect_to albums_addbooks_path(@album)
+      @album.books << Book.find(params[:bookid]) unless @album.books.include?(Book.find(params[:bookid]))
+      redirect_to albums_addbooks_path(@album)
+
   end
 
   def deletebook
