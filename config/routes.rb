@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   get 'albums/:id/addbooks' => 'albums#addbooks', as: 'albums_addbooks'
   get 'albums/:id/addbooktoalbum' => 'albums#addbooktoalbum', as: 'albums_addbooks_toalbum'
   get 'albums/:id/deletebook' => 'albums#deletebook', as: 'albums_deletebook'
+
+  get 'books/:id/albumsrelated' => 'books#albumsrelated', as: 'books_albumsrelated'
+  get 'books/:id/addalbums' => 'books#addalbums', as: 'books_addalbums'
+  get 'books/:id/addalbumtobook' => 'books#addalbumtobook', as: 'books_addalbums_tobook'
+  get 'books/:id/deletealbum' => 'books#deletealbum', as: 'books_deletealbum'
+
   resources :show_user
   resources :albums
   resources :books

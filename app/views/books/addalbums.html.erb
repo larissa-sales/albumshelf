@@ -1,0 +1,40 @@
+<div class = "form">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Add Albums to Book</h1>
+
+  <p>
+    <%= @book.title %>
+  </p>
+
+  <p>
+    <%= image_tag @book.cover.url(:thumb) %>
+  </p>
+
+  <table class="table table-hover">
+    <thead style="background-color: white; color:#1d5a67">
+      <tr>
+        <th>Cover</th>
+        <th>Title</th>
+        <th>Artist</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% Album.all.each do |album| %>
+        <tr>
+          <td><%= image_tag album.cover.url(:thumb) %></td>
+          <td><%= album.title %></td>
+          <td><%= album.artist %></td>
+          <td><%= link_to 'Details', album, class: "btn btn-info", style: "color: white" %></td>
+          <td><%= link_to 'Add', books_addalbums_tobook_path(albumid: album.id), data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Album', new_album_path, class: "btn btn-info", style: "color: white" %>
+</div>

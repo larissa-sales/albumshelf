@@ -31,7 +31,6 @@
           <td><%= book.genre %></td>
           <td><%= link_to 'Details', book, class: "btn btn-info", style: "color: white" %></td>
           <td><%= link_to 'Add', albums_addbooks_toalbum_path(bookid: book.id), data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %></td>
-          <td></td>
         </tr>
       <% end %>
     </tbody>

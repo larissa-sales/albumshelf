@@ -27,6 +27,7 @@
             <td><%= book.year %></td>
             <td><%= book.user.user_name%></td>
             <td><%= link_to 'Details', book, class: "btn btn-info", style: "color: white" %></td>
+            <td><%= link_to 'Add Albums', books_addalbums_path(book), class: "btn btn-info", style: "color: white" %></td>
           </tr>
           <% end %>
       <% end %>
