@@ -28,7 +28,7 @@
           <td><%= album.title %></td>
           <td><%= album.artist %></td>
           <td><%= link_to 'Details', album, class: "btn btn-info", style: "color: white" %></td>
-          <%if current_user == @book.user%>
+          <%if current_user == @book.user || current_user.admin? %>
             <td><%= link_to 'Delete', books_deletealbum_path(albumid: album.id) , data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %></td>
           <% end %>
         </tr>

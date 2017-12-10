@@ -29,7 +29,7 @@
     <%= image_tag @album.cover.url(:medium) %>
   </p>
 
-  <%if current_user == @album.user%>
+  <%if current_user == @album.user  || current_user.admin?%>
     <%= link_to 'Edit', edit_album_path(@album), class: "btn btn-info", style: "color: white" %>
     <%= link_to 'Delete', @album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %>
   <% end %>

@@ -26,7 +26,7 @@
           <td><%= image_tag book.cover.url(:thumb) %></td>
           <td><%= book.title %></td>
           <td><%= link_to 'Details', book, class: "btn btn-info", style: "color: white" %></td>
-          <%if current_user == @album.user%>
+          <%if current_user == @album.user || current_user.admin? %>
             <td><%= link_to 'Delete', albums_deletebook_path(bookid: book.id) , data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %></td>
           <% end %>
         </tr>

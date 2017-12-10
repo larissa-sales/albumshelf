@@ -1,8 +1,12 @@
 <div class = "form">
   <p id="notice"><%= notice %></p>
 
+    <%if current_user.admin?%>
+        <strong>Admin User</strong>
+    <%end%>
+
   <p>
-    <strong></strong>
+
     <%= image_tag (current_user.avatar.url(:thumb)) %>
   </p>
 

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'books/:id/addalbums' => 'books#addalbums', as: 'books_addalbums'
   get 'books/:id/addalbumtobook' => 'books#addalbumtobook', as: 'books_addalbums_tobook'
   get 'books/:id/deletealbum' => 'books#deletealbum', as: 'books_deletealbum'
+  get 'show_user/turnintoadmin' => 'show_user#turnintoadmin', as: 'turn_into_admin'
 
   resources :show_user
   resources :albums

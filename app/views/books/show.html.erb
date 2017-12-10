@@ -30,7 +30,7 @@
     <%= image_tag @book.cover.url(:medium) %>
   </p>
 
-  <%if current_user == @book.user%>
+  <%if current_user == @book.user  || current_user.admin? %>
     <%= link_to 'Edit', edit_book_path(@book), class: "btn btn-info", style: "color: white" %>
     <%= link_to 'Delete', @book, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info", style: "color: white" %>
   <% end %>
