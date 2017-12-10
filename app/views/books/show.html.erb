@@ -27,7 +27,7 @@
   </p>
 
   <p   style="text-align:center;">
-    <%= image_tag @book.cover.url(:large) %>
+    <%= image_tag @book.cover.url(:medium) %>
   </p>
 
   <%if current_user == @book.user  || current_user.admin? %>
